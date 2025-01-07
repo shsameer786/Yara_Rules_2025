@@ -1039,23 +1039,6 @@ rule sig_91619737b3f7af4623dc62b4f3df7b551337ec94f693a3b9ba35bb231483393e {
       1 of ($x*) and all of them
 }
 
-rule a1e75210ea13b6d3466823b488381fac652f23f96c7404fac28ae5404accdad5 {
-   meta:
-      description = "evidences - file a1e75210ea13b6d3466823b488381fac652f23f96c7404fac28ae5404accdad5.vbs"
-      author = "Sameer P Sheik"
-      reference = "https://datalake.abuse.ch/malware-bazaar/daily/"
-      date = "2025-01-05"
-      hash1 = "a1e75210ea13b6d3466823b488381fac652f23f96c7404fac28ae5404accdad5"
-   strings:
-      $x1 = "WshShell.RegWrite \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\sethc.exe" ascii
-      $x2 = "WshShell.RegWrite \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\sethc.exe" ascii
-      $s3 = "er\",WScript.CreateObject(\"WScript.shell\").ExpandEnvironmentStrings(\"%SystemRoot%\")&\"\\system32\\seth.exe\",\"REG_SZ\"" fullword ascii
-      $s4 = "Set WshShell = WScript.CreateObject(\"WScript.Shell\")" fullword ascii /* Goodware String - occured 2 times */
-   condition:
-      uint16(0) == 0x6553 and filesize < 1KB and
-      1 of ($x*) and all of them
-}
-
 rule b55d881db7644ac7a4e4f1fedfa842e895590ff0e2aa400af85a7099d7d08c32 {
    meta:
       description = "evidences - file b55d881db7644ac7a4e4f1fedfa842e895590ff0e2aa400af85a7099d7d08c32.sh"
