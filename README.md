@@ -4,7 +4,7 @@
 
 This repository contains YARA rules generated from daily malware samples obtained from [Malware Bazaar](https://datalake.abuse.ch/malware-bazaar/daily/) for the year 2025. These rules are designed to aid in malware detection and classification based on observed patterns and characteristics in malicious files.
 
-**Author:** Sameer P Sheik - Security Consultant - IBM
+**Author:** Sameer P Sheik - Security Consultant
 
 ## Table of Contents
 
